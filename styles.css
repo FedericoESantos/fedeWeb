@@ -62,6 +62,7 @@ main .cont-main {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin: 20px;
 }
 main .cont-main .cont{ 
     display: flex;
@@ -258,6 +259,11 @@ footer .links p {
 }
 
 /* -------------- PAGINA 2 | QUIEN SOY ------------------- */
+.quien {
+    margin: 20px;
+    padding: 20px;
+}
+
 .quien h1 {
     padding-top: 15px;
 }
@@ -282,6 +288,13 @@ footer .links p {
 }
 
 /* -------------- PAGINA 3 | FOTOS ------------------- */
+.fotos { 
+    margin: 20px;
+    padding: 20px;
+}
+
+
+
 .fotos h1 {
     padding-top: 15px;
 }
@@ -350,6 +363,10 @@ footer .links p {
 }
 
 /* -------------- PAGINA 4 | CONTACTO ------------------- */
+.contacto {
+    margin: 20px;
+    padding: 20px;
+}
 
 .contacto h1 {
     padding-top: 15px;
