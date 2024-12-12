@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'h1'; 
+    src: url('/assets/fonts/beyond_the_mountains.otf') 
+}
+body {
+    font-family: Arial, sans-serif;
+}
+h1, h2, h3 {
+    text-align: center;
+    font-family: "h1";
+}
+/* -------------- HEADER ------------------------- */
+
+header {
+    background-color: #0f0f0f;
+    color: rgb(199, 148, 52);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li img {
+    width: 30px;
+    padding-right: 5px;
+}
+
+nav ul li a {
+    color: rgb(241, 150, 12);
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* -------------- MAIN INFO ------------------------- */
+
+main {
+    margin-top: 50px; 
+}
+main .cont-main {
+    width: 100%;
+    background-color: #ebddb6b6;
+    background-image: url("/assets/logo-diseño.png");
+    background-repeat: repeat;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+main .cont-main .cont{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; 
+    align-items: center; 
+    text-align: center; 
+    gap: 20px;
+}
+
+main .cont-main figure {
+   padding: 15px;
+}
+
+main .cont-main .cont figure img {
+    display: block;
+    margin: 0% auto;
+    width: 200px;
+    height: auto; 
+    border-radius: 65%;
+    border-style: groove;
+}
+main .cont-main .cont .info {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+main .cont-main .cont div img {
+    width: 100%;
+    padding: 10px;
+}
+
+@media (min-width: 440px) {
+    .paisaje {
+        height: 310px;
+    }
+    main .cont-main .cont .info {
+        justify-self: center;
+    }
+}
+
+main .cont-main .cont2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;
+    padding: 20px;
+}
+
+main .cont-main .cont2 .aptitudes p{
+    width: 100%; 
+    max-width: 700px; 
+    margin: 20px auto; 
+}
+
+/* -------------- MAIN SECCIONES ------------------------- */
+
+.home {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.home .cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.home .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 270px;
+    border-style: groove ;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home .cards .card img {
+    width: 270px;
+    object-fit: cover;
+}
+
+.home .cards .card .card-info {
+    position: relative;
+    text-align: center;
+}
+
+
+/* -------------- FOOTER ------------------------- */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #0f0f0f;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+footer .foto {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+footer .foto img {
+    border-style:groove;
+    border-radius: 40%;
+    width: auto;
+    height: 130px;
+}
+
+.footer .paginas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+footer .paginas ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0%;
+    padding: 0;
+    list-style: none;
+}
+
+footer .paginas ul a {
+    color: #ccc;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+}
+
+footer .paginas ul a:hover {
+    color: #ff9900;
+}
+
+footer .paginas ul .selec {
+    color: rgb(78, 52, 224);
+}
+
+footer .links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-right: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer .links img{
+    width: 40px;
+}
+footer .links a {
+    color: #ff9900;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+footer .links .face, .insta, .linke {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .links p {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+}
+@media (min-width: 440px) {
+    footer .links .face, .insta, .linke {
+        flex-direction: row;
+        text-align: center;
+    }
+}
+
+/* -------------- PAGINA 2 | QUIEN SOY ------------------- */
+.quien h1 {
+    padding-top: 15px;
+}
+
+.quien .container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.quien .container img {
+    width: 300px;
+    padding: 10px;
+}
+
+.quien .container .texto {
+    padding: 20px;
+}
+
+/* -------------- PAGINA 3 | FOTOS ------------------- */
+.fotos h1 {
+    padding-top: 15px;
+}
+
+.fotos h3 {
+    padding-bottom: 15px;
+}
+
+.fotos .momentos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fotos .momentos .title {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    background-color: #0f0c38;
+}
+
+.fotos .momentos .title h3 {
+    color: #ccc;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.fotos .momentos .fotogra {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+.fotos .momentos .fotogra .card-foto {
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+    height: auto;
+    border-style: groove;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+}
+
+.fotos .momentos .fotogra .card-foto img {
+    width: 150px;
+    height: 120px;
+
+}
+/* fantasy para el titulo */
+.fotos .momentos .fotogra .card-foto .card-foto-info strong {
+    font-family: 'Lucida Sans'; 
+}
+.fotos .momentos .fotogra .card-foto .card-foto-info p {
+    font-family:'Comic Sanz'; 
+    margin: 10px;
+}
+
+/* -------------- PAGINA 4 | CONTACTO ------------------- */
+
+.contacto h1 {
+    padding-top: 15px;
+}
+
+.contacto .container2 {
+    display: flex;
+    margin: 20px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.container2 .fede-cont {
+    width: 300px;
+    margin: 20px;
+    border-radius: 25%;
+    border-style: groove;
+}
+
+.contacto .redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.contacto .redes p{
+    text-align: center;
+}
+
+.contacto .redes img {
+    width: 40px;
+}
+
