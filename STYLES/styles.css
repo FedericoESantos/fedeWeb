@@ -97,8 +97,12 @@ body {
 
 /* SECCIONES */
 .section {
-  padding: 50px 20px;
+  padding: 120px 20px; /* antes era 50px → más aire vertical */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra todo el contenido */
+  justify-content: center;
 }
 .section.dark {
   background: #111;
@@ -108,18 +112,40 @@ body {
   font-size: 2em;
   color: #00c3ff;
 }
+#diseno, 
+#programacion {
+  scroll-margin-top: 120px; /* asegura buen scroll al hacer click en el menú */
+}
+#diseno h2 {
+  margin: 0%;
+}
 
-#diseno, #contacto {
-  padding: 10px;
+/* TÍTULOS CENTRADOS Y MÁS DESTACADOS */
+.section h2 {
+  margin-bottom: 50px;
+  font-size: 2.4em;
+  color: #00c3ff;
+  text-align: center;
+}
+
+/* Texto bajo el título */
+#diseno span {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  color: #e8e8e8;
+  font-weight: 500;
+  max-width: 800px;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px; /* antes era 25px → más aire entre tarjetas */
+  max-width: 1000px; /* un poco más angosto para centrado */
   margin: auto;
+  justify-content: center;
 }
 .card {
   background: #1b1b1b;
@@ -130,6 +156,13 @@ body {
 }
 .card:hover {
   transform: translateY(-5px);
+}
+.cards-detalle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* más separación entre proyectos */
+  justify-content: center;
+  margin-top: 30px;
 }
 .card img {
   width: 100%;
@@ -212,7 +245,6 @@ body {
     font-size: 2em;
   }
 }
-
 
 .proyecto-detalle {
   display: none;
@@ -344,4 +376,68 @@ body {
 
 .close:hover {
   color: #ff3333;
+}
+
+
+/* ==== RESPONSIVE ==== */
+
+/* Hasta tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 80px 15px;
+  }
+}
+
+/* Hasta celulares (pantallas chicas) */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* una columna */
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .cards-detalle {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .section h2 {
+    font-size: 2em;
+  }
+
+  #diseno span {
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+}
+
+/* Pequeños ajustes visuales para pantallas muy chicas (menos de 480px) */
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 10px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.7em;
+  }
 }
