@@ -75,7 +75,7 @@
             <div class="card">
                 <h3>E-commerce React</h3>
                 <p>Sitio con carrito de compras, EmailJS y panel de administración (Front-End). <br>
-                Gestión de envío de datos por formularios con puro Front-End sin usar Back-End.
+                    Gestión de envío de datos por formularios con puro Front-End sin usar Back-End.
                 </p>
                 <a href="#proyecto3" class="btn small">Ver proyecto</a>
             </div>
@@ -92,7 +92,7 @@
                 <div class="card-mini">
                     <img src="./IMG/APP-ESCRITORIO.webp" alt="PYTHON">
                     <h4>Gestión de Productos</h4>
-                    <p>Interfaz intuitiva con búsqueda por ID y control de stock - 
+                    <p>Interfaz intuitiva con búsqueda por ID y control de stock -
                         Aplicación de Escritorio. <br>
                         • Api de Escritorio realizado con Python.
                     </p>
@@ -124,7 +124,8 @@
                     <h4>Peluquería Oviedo</h4>
                     <p>E-Commerce de una peluquería, con listado de productos, carrito de compras y galeria de imagenes
                         <br>
-                        • Realizado con Javascript, HTML y CSS.</p>
+                        • Realizado con Javascript, HTML y CSS.
+                    </p>
                     <a href="https://peluqueriaoviedo.netlify.app/" target="_blank">Ver sitio</a>
                 </div>
 
@@ -155,7 +156,7 @@
                 <div class="card-mini">
                     <img src="./IMG/flasharte.webp" alt="flasharte">
                     <h4>E-commerce de venta de productos impresos en 3D</h4>
-                    <p>Sitio web hecho con react. Un E-Commerce de ventas 
+                    <p>Sitio web hecho con react. Un E-Commerce de ventas
                         de productos impresos en 3D con carrito de compra y listado de productos. <br>
                         • Front-End realizado con React.
                     </p>
@@ -226,6 +227,28 @@
         const toggle = document.querySelector('.menu-toggle');
         const nav = document.querySelector('.nav');
         toggle.addEventListener('click', () => nav.classList.toggle('active'));
+
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            status.textContent = "Enviando...";
+
+            const response = await fetch("https://formspree.io/f/xvgdgwvw", {
+                method: "POST",
+                body: data,
+                headers: { Accept: "application/json" }
+            });
+
+            if (response.ok) {
+                status.textContent = "✅ Mensaje enviado con éxito. ¡Gracias por contactarme! A la brevedad te estoy respondiendo.";
+                form.reset();
+            } else {
+                status.textContent = "❌ Ocurrió un error. Intenta nuevamente.";
+            }
+        });
 
     </script>
 </body>
