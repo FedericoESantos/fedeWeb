@@ -33,13 +33,13 @@ body {
   color: #00c3ff;
 }
 
-.nav a {
+a, .nav a {
   color: #fff;
   margin: 0 15px;
   text-decoration: none;
   transition: 0.3s;
 }
-.nav a:hover {
+a, .nav a:hover {
   color: #00c3ff;
 }
 
